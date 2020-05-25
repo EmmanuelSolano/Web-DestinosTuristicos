@@ -10,7 +10,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
   <style>
-    
+    h5{
+		text-align: center;
+	}
+	table, th, td {
+		border: hidden;
+		padding: 15px;
+	}
+	table {
+		border-spacing: 5px;
+	}
+	tr {
+		text-align: left;
+	}
 	
   </style>
   
@@ -47,7 +59,45 @@
   </ul>
 </nav>
 
-
+<div>
+	<br>
+	<br>
+	<br>
+	<h5>Mapa del sitio</h5>
+	<table style="width:70%">
+	  <tr>
+		<td><button type="button" class="btn btn-primary btn-sm" >Login</button></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >Mantenimiento ofertas</button>
+		<button type="button" class="btn btn-primary btn-sm" >Mantenimiento sitios más visitados</button>
+		<button type="button" class="btn btn-primary btn-sm" >Buscar destinos</button></td>
+	  </tr>
+	  <tr>
+		<td><button type="button" class="btn btn-primary btn-sm" >Principal</button></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >Login</button>
+		<button type="button" class="btn btn-primary btn-sm" >Mapa del sitio</button>
+		<button type="button" class="btn btn-primary btn-sm" >Créditos</button>
+		<button type="button" class="btn btn-primary btn-sm" >Buscar destinos</button></td>
+	  </tr>
+	  <tr>
+		<td><button type="button" class="btn btn-primary btn-sm" >Buscar destinos</button></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >Sitios más visitados</button>
+		<button type="button" class="btn btn-primary btn-sm" >Ofertas destinos</button>
+		<button type="button" class="btn btn-primary btn-sm" >¿Cómo llegar al sitio?</button>
+		<button type="button" class="btn btn-primary btn-sm" >Resultados búsqueda</button></td>
+	  </tr>
+	  
+	  <tr>
+		<td><button type="button" class="btn btn-primary btn-sm" >Resultados búsqueda</button></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >¿Cómo llegar al destino?</button>
+		</td>
+	  </tr>
+	  
+	  <tr>
+		<td><button type="button" class="btn btn-primary btn-sm" >¿Cómo llegar al destino?</button></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >Más información destino</button></td>
+	  </tr>
+	</table>
+</div>
 
 </body>
 </html>
