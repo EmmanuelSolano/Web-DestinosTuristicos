@@ -42,29 +42,31 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Principal</a>
+      <a class="nav-link" href="main.php">Principal</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Destinos Turísticos
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Buscar destinos cercanos</a>
-        <a class="dropdown-item" href="#">Sitios más visitados</a>
+        <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
+        <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Mapa del sitio</a>
+      <a class="nav-link" href="mapadelsitio.php">Mapa del sitio</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link" href="#">Créditos</a>
+      <a class="nav-link" href="creditos.php">Créditos</a>
     </li>
   </ul>
 </nav>
 
-<div style="text-align: right">
-<button type="button" class="btn btn-primary btn-sm" >Iniciar sesión</button>
-</div>
+<form action="login.php" method="post">
+	<div style="text-align: right">
+	<button type="submit" class="btn btn-primary btn-sm" >Iniciar sesión</button>
+	</div>
+</form>
 
 
 <div class="container-fluid">

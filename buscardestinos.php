@@ -24,6 +24,15 @@
 	button{
 		text-align: right;
 	}
+	
+	div {
+		width: 100%;
+		height: 600px;
+		background-image: url('fondo.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		opacity: 100%;
+	}
 </style>
 </head>
 <body>
@@ -36,29 +45,29 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Principal</a>
+      <a class="nav-link" href="main.php">Principal</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Destinos Turísticos
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Buscar destinos cercanos</a>
-        <a class="dropdown-item" href="#">Sitios más visitados</a>
+        <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
+        <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Mapa del sitio</a>
+      <a class="nav-link" href="mapadelsitio.php">Mapa del sitio</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link" href="#">Créditos</a>
+      <a class="nav-link" href="creditos.php">Créditos</a>
     </li>
   </ul>
 </nav>
 <div>
 	<table style="width:70%">
 	  <tr>
-		<td>Seleccione un lugar:</td>
+		<td><b>Seleccione un lugar:<b></td>
 		<td><select name="lugar">
 				<option value="C">Cartago</option>
 				<option value="A">Alajuela</option>
@@ -70,7 +79,7 @@
 			</select></td>
 	  </tr>
 	  <tr>
-		<td>Duracción de recorrido:</td>
+		<td><b>Duracción de recorrido:<b></td>
 		<td><select name="tiempo">
 				<option value="1"> 30 min</option>
 				<option value="2">1 h</option>
@@ -83,7 +92,7 @@
 			</select></td>
 	  </tr>
 	  <tr>
-		<td>Seleccione el tipo de camino:</td>
+		<td><b>Seleccione el tipo de camino:<b></td>
 		<td><select name="camino">
 				<option value="1">Asfalto</option>
 				<option value="2">Lastre</option>
@@ -94,7 +103,7 @@
 	  </tr>
 	  
 	  <tr>
-		<td>Seleccione el precio:</td>
+		<td><b>Seleccione el precio:<b></td>
 		<td><select name="precio">
 				<option value="1">< 10000</option>
 				<option value="2">> 10000 y < 30000</option>
@@ -104,7 +113,7 @@
 	  </tr>
 	  
 	  <tr>
-		<td>Seleccione el estilo de destino:</td>
+		<td><b>Seleccione el estilo de destino:<b></td>
 		<td><select name="estilo">
 				<option value="1">Campo</option>
 				<option value="2">Ciudad</option>
