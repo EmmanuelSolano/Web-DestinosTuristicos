@@ -31,7 +31,7 @@
 	div {
 		width: 100%;
 		height: 600px;
-		background-image: url('fondo2.jpg');
+		background-image: url('fondo3.png');
 		background-size: cover;
 		background-attachment: fixed;
 		opacity: 100%;

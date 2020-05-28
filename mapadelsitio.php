@@ -76,35 +76,55 @@
 	<h5>Mapa del sitio</h5>
 	<table style="width:70%">
 	  <tr>
-		<td><button type="button" class="btn btn-primary btn-sm" >Login</button></td>
-		<td><button type="button" class="btn btn-primary btn-sm" >Mantenimiento ofertas</button>
-		<button type="button" class="btn btn-primary btn-sm" >Mantenimiento sitios más visitados</button>
-		<button type="button" class="btn btn-primary btn-sm" >Buscar destinos</button></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="login.php">Login</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="main.php">Principal</a>
+		<a type="button" class="btn btn-primary btn-sm" href="homeadmin.php" >Mantenimiento</a>
+		<a type="button" class="btn btn-primary btn-sm" href="mapadelsitio.php">Mapa del sitio</a>
+		<a type="button" class="btn btn-primary btn-sm" href="creditos.php">Créditos</a></td>
 	  </tr>
 	  <tr>
-		<td><button type="button" class="btn btn-primary btn-sm" >Principal</button></td>
-		<td><button type="button" class="btn btn-primary btn-sm" >Login</button>
-		<button type="button" class="btn btn-primary btn-sm" >Mapa del sitio</button>
-		<button type="button" class="btn btn-primary btn-sm" >Créditos</button>
-		<button type="button" class="btn btn-primary btn-sm" >Buscar destinos</button></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="main.php">Principal</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="homeadmin.php">Login</a>
+		<a type="button" class="btn btn-primary btn-sm" href="mapadelsitio.php">Mapa del sitio</a>
+		<a type="button" class="btn btn-primary btn-sm" href="creditos.php">Créditos</a>
+		<a type="button" class="btn btn-primary btn-sm" href="buscardestinos.php">Buscar destinos</a></td>
 	  </tr>
 	  <tr>
-		<td><button type="button" class="btn btn-primary btn-sm" >Buscar destinos</button></td>
-		<td><button type="button" class="btn btn-primary btn-sm" >Sitios más visitados</button>
-		<button type="button" class="btn btn-primary btn-sm" >Ofertas destinos</button>
-		<button type="button" class="btn btn-primary btn-sm" >¿Cómo llegar al sitio?</button>
-		<button type="button" class="btn btn-primary btn-sm" >Resultados búsqueda</button></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="buscardestinos.php">Buscar destinos</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="sitiosmasvisitados.php">Sitios más visitados</a>
+		<a type="button" class="btn btn-primary btn-sm" href="ofertas.php">Ofertas destinos</a>
+		<a type="button" class="btn btn-primary btn-sm" href="llegardestino.php">¿Cómo llegar al sitio?</a>
+		<a type="button" class="btn btn-primary btn-sm" href="resultadosbusqueda.php">Resultados búsqueda</a></td>
 	  </tr>
 	  
 	  <tr>
-		<td><button type="button" class="btn btn-primary btn-sm" >Resultados búsqueda</button></td>
-		<td><button type="button" class="btn btn-primary btn-sm" >¿Cómo llegar al destino?</button>
+		<td><a type="button" class="btn btn-primary btn-sm" href="resultadosbusqueda.php">Resultados búsqueda</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="llegardestino.php">¿Cómo llegar al destino?</a>
 		</td>
 	  </tr>
 	  
 	  <tr>
-		<td><button type="button" class="btn btn-primary btn-sm" >¿Cómo llegar al destino?</button></td>
-		<td><button type="button" class="btn btn-primary btn-sm" >Más información destino</button></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="llegardestino.php">¿Cómo llegar al destino?</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="detalles.php">Más información destino</a></td>
+	  </tr>
+	  
+	  <tr>
+		<td><a type="button" class="btn btn-primary btn-sm" href="homeadmin.php">Mantenimiento</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="mantenimientodestinos.php">Mantenimiento de destinos</a>
+		<a type="button" class="btn btn-primary btn-sm" href="mantenimientoofertas.php">Mantenimiento de ofertas</a></td>
+	  </tr>
+	  
+	  <tr>
+		<td><a type="button" class="btn btn-primary btn-sm" href="mantenimientodestinos.php">Mantenimiento de destinos</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="creardestino.php">Crear destino</a>
+		<a type="button" class="btn btn-primary btn-sm" href="eliminardestino.php">Eliminar destino</a>
+		<a type="button" class="btn btn-primary btn-sm" href="modificardestino.php">Modificar destino</a></td>
+	  </tr>
+	  
+	  <tr>
+		<td><a type="button" class="btn btn-primary btn-sm" href="mantenimientoofertas.php" >Mantenimiento de ofertas</a></td>
+		<td><a type="button" class="btn btn-primary btn-sm" href="crearoferta.php">Crear oferta</a>
+		<a type="button" class="btn btn-primary btn-sm" href="modificaroferta.php">Modificar oferta</a></td>
 	  </tr>
 	</table>
 </div>

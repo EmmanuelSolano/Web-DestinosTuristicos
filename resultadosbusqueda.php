@@ -29,6 +29,15 @@
 		max-width: 100%;
 		max-heigh: 100%;
 	}
+	
+	div {
+		width: 100%;
+		height: 600px;
+		background-image: url('fondo.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		opacity: 100%;
+	}
 </style>
 </head>
 <body>
