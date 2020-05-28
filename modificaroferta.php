@@ -21,9 +21,8 @@
 	}
 	
   </style>
-  
-  
-  <style type="text/css">
+
+<style type="text/css">
   img {
 	  width: auto;
 	  height: auto;
@@ -54,6 +53,15 @@
         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
       </div>
     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Mantenimiento
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="mantenimientodestinos.php">Administrar destinos</a>
+        <a class="dropdown-item" href="mantenimientoofertas.php">Administrar ofertas</a>
+      </div>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="mapadelsitio.php">Mapa del sitio</a>
     </li>
@@ -63,23 +71,35 @@
   </ul>
 </nav>
 
-<form action="login.php" method="post">
-	<div style="text-align: right">
-	<button type="submit" class="btn btn-primary btn-sm" >Iniciar sesión</button>
-	</div>
-</form>
+<div>
+	<table style="width:70%">
+      <tr>
+		<td><b>Seleccione el destino del cual desea modificar una oferta:<b></td>
+		<td><select name="ofertaDestino">
+				<option value="C">Se llena dinamicamente</option>
+			</select></td>
+	  </tr>
+	  <tr>
+		<td><b>Porcentaje de descuento:<b></td>
+		<td><select name="descuentoDestino">
+                <option value="0"> 0%</option>
+				<option value="5"> 5%</option>
+				<option value="10">10%</option>
+				<option value="15">15%</option>
+				<option value="20">20%</option>
+				<option value="25">25%</option>
+				<option value="50">50%</option>
+				<option value="75">75%</option>
+			</select></td>
+	  </tr><tr>
+        <td><b>Ingrese la descripción de la oferta</b></td>
+        <td><input type="text" placeholder="Ingrese descripción" name="descripcionDestino" required></td>
+      </tr> 
+	</table>
+	<br>
+	<br>
+	<button type="button" class="btn btn-primary" onclick="window.location.href='modificaroferta.php'">
+		Modificar oferta
+	</button>
 
-
-<div class="container-fluid">
-  <font color="white" size="5" face="Sanserif"><h1 align="center">Bienvenidos a la búsqueda de destinos turísticos</h1></font>
-  
-  <img src="imagen1.jpg" />
-  <img src="imagen2.jpg" />
-  
-  <br>
-  <br>
-  <h5 align="center">Contacto: destinosturisticos@gmail.com                  Teléfono: 8888-00-01</h5>
 </div>
-
-</body>
-</html>

@@ -38,6 +38,7 @@
       <div class="dropdown-menu">
         <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
         <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
+        <a class="dropdown-item" href="ofertas.php">Ofertas</a>
       </div>
     </li>
     <li class="nav-item">
@@ -60,6 +61,10 @@
 			Estilo: campo
 
 			Camino: asfalto</p></td>
+
+      <button type="button" class="btn btn-primary" onclick="window.location.href='llegardestino.php'">
+		    ¿Cómo llegar al destino?
+	    </button>
 		<td><img src="duran.jpg" /></td>
 	  </tr>
 	  <tr>

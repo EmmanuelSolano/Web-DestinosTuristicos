@@ -10,18 +10,26 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
   <style>
-	.container{
-		width: 100%;
-		height: 99%;
-		text-align: center;
-		padding: 100px;
-	}
-	label{
+	table, th, td, input {
+		border: hidden;
 		padding: 15px;
-		text-align: left;
 	}
-  </style>
-  
+	table {
+		border-spacing: 5px;
+	}
+	tr {
+		text-align: center;
+	}
+	
+	button{
+		text-align: center;
+	}
+	
+	img{
+		max-width: 100%;
+		max-heigh: 100%;
+	}
+</style>
 </head>
 <body>
 
@@ -53,22 +61,32 @@
     </li>
   </ul>
 </nav>
-<form action="action_page.php" method="post">
 
-  <div class="container">
-    <label for="uname">Usuario</label>
-    <input type="text" placeholder="Ingrese usuario" name="uname" required>
+<div>
+	Filtrar por:
+	<input type="radio" id="comentarios" name="comment" value="Por comentarios">Por comentarios</input>
+	<input type="radio" id="likes" name="like" value="Por likes">Por likes</input>
 	<br>
-    <label for="psw">Contraseña</label>
-    <input type="password" placeholder="Ingrese contraseña" name="psw" required>
 	<br>
-    <button type="submit" class="btn btn-primary btn-sm" onclick="window.location.href='homeadmin.php'">
-      Login
-    </button>
-	<button type="button" class="cancelbtn">Cancelar</button>
-  </div>
-
-</form>
-
-</body>
-</html>
+	<table style="width:70%">
+	  <tr>
+		<td>Descripción</td>
+		<td></td>
+	  </tr>
+      <tr>
+        <p style="color:blue">
+            En caso de pagar con tarjetas Visa se le ofrece un descuento del 15% en los siguientes destinos 
+        </p>
+      </tr>
+	  <tr>
+		<td><p>Volcán Irazú, su actividad es ir a observar y caminar los alrededores del parque, se encuentra a 1 hora de Cartago. Precio de 2500 colones</p></td>
+		<td><img src="irazu.jpg" /></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >Ir</button></td>
+	  </tr>
+	  
+	  <tr>
+		<td><p>Mirador del Valle de Orosí, actividad ir a observar la vista del valle, e ideal para almuerzos, juegos entre familia, etc. Se encuentra a 30 minutos de Cartago.  Precio 5000 colones</p></td>
+		<td><img src="mirador.jpg" /></td>
+		<td><button type="button" class="btn btn-primary btn-sm" >Ir</button></td>
+	  </tr>
+	  

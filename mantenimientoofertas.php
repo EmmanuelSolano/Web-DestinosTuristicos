@@ -10,18 +10,31 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
   <style>
-	.container{
-		width: 100%;
-		height: 99%;
+    .container-fluid { 
+      position: absolute;
+      width: 100%;
+      height: 99%;
+      background-color: #5B8CA4; ; 
+    }
+	h5{
 		text-align: center;
-		padding: 100px;
 	}
-	label{
-		padding: 15px;
-		text-align: left;
-	}
+
+    .centrado{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+	
   </style>
-  
+
+<style type="text/css">
+  img {
+	  width: auto;
+	  height: auto;
+	  text-align: center;
+	  padding: 155px;
+	}
+ </style>
 </head>
 <body>
 
@@ -45,6 +58,15 @@
         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
       </div>
     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Mantenimiento
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="mantenimientodestinos.php">Administrar destinos</a>
+        <a class="dropdown-item" href="mantenimientoofertas.php">Administrar ofertas</a>
+      </div>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="mapadelsitio.php">Mapa del sitio</a>
     </li>
@@ -53,22 +75,28 @@
     </li>
   </ul>
 </nav>
-<form action="action_page.php" method="post">
 
-  <div class="container">
-    <label for="uname">Usuario</label>
-    <input type="text" placeholder="Ingrese usuario" name="uname" required>
-	<br>
-    <label for="psw">Contraseña</label>
-    <input type="password" placeholder="Ingrese contraseña" name="psw" required>
-	<br>
-    <button type="submit" class="btn btn-primary btn-sm" onclick="window.location.href='homeadmin.php'">
-      Login
+<div class="centrado">
+    
+</div>
+
+<div class="centrado">
+    
+</div>
+
+<div class="centrado">
+    
+</div>
+
+<div class="centrado">
+    <button type="button" class="btn btn-primary" onclick="window.location.href='crearoferta.php'">
+            Agregar oferta a destino turístico
     </button>
-	<button type="button" class="cancelbtn">Cancelar</button>
-  </div>
+</div>
 
-</form>
+<div class="centrado">
+    <button type="button" class="btn btn-primary" onclick="window.location.href='modificaroferta.php'">
+            Modificar oferta a destino turístico
+    </button>
+</div>
 
-</body>
-</html>

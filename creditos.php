@@ -45,6 +45,7 @@
       <div class="dropdown-menu">
         <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
         <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
+        <a class="dropdown-item" href="ofertas.php">Ofertas</a>
       </div>
     </li>
     <li class="nav-item">

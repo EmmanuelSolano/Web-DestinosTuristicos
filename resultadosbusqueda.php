@@ -50,6 +50,7 @@
       <div class="dropdown-menu">
         <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
         <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
+		<a class="dropdown-item" href="ofertas.php">Ofertas</a>
       </div>
     </li>
     <li class="nav-item">
@@ -76,7 +77,7 @@
 		<td><p>Sanatorio Carlos Durán, su actividad principal del reducto es realizar una caminata por sus alrededores e interior del edificio. Se encuentra a unos 30 minutos del norte de Cartago. Precio: 1000 colones</p></td>
 		
 		<td><img src="duran.jpg" /></td>
-		<td><button type="button" class="btn btn-primary btn-sm" >Ir</button></td>
+		<td><button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='detalles.php'">Ir</button></td>
 	  </tr>
 	  <tr>
 		<td><p>Volcán Irazú, su actividad es ir a observar y caminar los alrededores del parque, se encuentra a 1 hora de Cartago. Precio de 2500 colones</p></td>

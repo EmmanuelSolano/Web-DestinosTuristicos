@@ -10,30 +10,26 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
   <style>
-	table, th, td {
-		border: hidden;
-		padding: 15px;
-	}
-	table {
-		border-spacing: 5px;
-	}
-	tr {
+    .container-fluid { 
+      position: absolute;
+      width: 100%;
+      height: 99%;
+      background-color: #5B8CA4; ; 
+    }
+	h5{
 		text-align: center;
 	}
 	
-	button{
-		text-align: right;
+  </style>
+
+<style type="text/css">
+  img {
+	  width: auto;
+	  height: auto;
+	  text-align: center;
+	  padding: 155px;
 	}
-	
-	div {
-		width: 100%;
-		height: 600px;
-		background-image: url('fondo.jpg');
-		background-size: cover;
-		background-attachment: fixed;
-		opacity: 100%;
-	}
-</style>
+ </style>
 </head>
 <body>
 
@@ -54,7 +50,16 @@
       <div class="dropdown-menu">
         <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
         <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
-		<a class="dropdown-item" href="ofertas.php">Ofertas</a>
+        <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Mantenimiento
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="mantenimientodestinos.php">Administrar destinos</a>
+        <a class="dropdown-item" href="mantenimientoofertas.php">Administrar ofertas</a>
       </div>
     </li>
     <li class="nav-item">
@@ -65,11 +70,26 @@
     </li>
   </ul>
 </nav>
+
 <div>
 	<table style="width:70%">
+      <tr>
+		<td><b>Seleccione el lugar a modificar:<b></td>
+		<td><select name="destinoAModificar">
+				<option value="C">Se llena dinamicamente</option>
+			</select></td>
+	  </tr>
+      <tr>
+        <td><b>Ingrese el nombre del destino turístico</b></td>
+        <td><input type="text" placeholder="Ingrese nombre" name="nombreDestino" required></td>
+      </tr>
+      <tr>
+        <td><b>Ingrese la descripcion del destino turístico</b></td>
+        <td><input type="text" placeholder="Ingrese descripción" name="descripcionDestino" required></td>
+      </tr>  
 	  <tr>
 		<td><b>Seleccione un lugar:<b></td>
-		<td><select name="lugar">
+		<td><select name="lugarDestino">
 				<option value="C">Cartago</option>
 				<option value="A">Alajuela</option>
 				<option value="S">San José</option>
@@ -81,7 +101,7 @@
 	  </tr>
 	  <tr>
 		<td><b>Duracción de recorrido:<b></td>
-		<td><select name="tiempo">
+		<td><select name="tiempoDestino">
 				<option value="1"> 30 min</option>
 				<option value="2">1 h</option>
 				<option value="3">1 h 30 min</option>
@@ -94,7 +114,7 @@
 	  </tr>
 	  <tr>
 		<td><b>Seleccione el tipo de camino:<b></td>
-		<td><select name="camino">
+		<td><select name="caminoDestino">
 				<option value="1">Asfalto</option>
 				<option value="2">Lastre</option>
 				<option value="3">Llano</option>
@@ -105,7 +125,7 @@
 	  
 	  <tr>
 		<td><b>Seleccione el precio:<b></td>
-		<td><select name="precio">
+		<td><select name="precioDestino">
 				<option value="1">< 10000</option>
 				<option value="2">> 10000 y < 30000</option>
 				<option value="3">> 30000 y < 50000</option>
@@ -115,21 +135,22 @@
 	  
 	  <tr>
 		<td><b>Seleccione el estilo de destino:<b></td>
-		<td><select name="estilo">
+		<td><select name="estiloDestino">
 				<option value="1">Campo</option>
 				<option value="2">Ciudad</option>
 				<option value="3">Bosque</option>
 				<option value="4">Playa</option>
 			</select></td>
 	  </tr>
+      <tr>
+        <td><b>Ingrese la imagen del destino turístico</b></td>
+        <td><input type="file" name="imagenDestino" required></td>
+      </tr>
 	</table>
 	<br>
 	<br>
-	<button type="button" class="btn btn-primary" onclick="window.location.href='resultadosbusqueda.php'">
-		Buscar sitios turísticos cercanos
+	<button type="button" class="btn btn-primary" onclick="window.location.href='modificardestino.php'">
+		Modificar destino
 	</button>
 
 </div>
-
-</body>
-</html>
