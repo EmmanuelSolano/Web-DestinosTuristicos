@@ -163,5 +163,152 @@
 	}
 	
 	
+	function obtenerVideo($posicionDestino){
+		$servername = "163.178.107.10";//La dirección del servidor MySQL
+		$username = "laboratorios";//usuario del servidor
+		$password = "UCRSA.118";//contraseña del servidor
+		$dbname = "proyectos_expertos_b16213_b77436";//nombre de la base de datos que se va a utilizar
+
+		//Realiza la conexión a una base de datos, utilizando la dirección, usuario, contraseña y base de datos del servidor a utilizar
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// En caso que la conexión fallé, envía mensaje de conexión fallida.
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} 
+		
+		$sql = "SELECT `videoslinks`.`id`,
+		`videoslinks`.`linkvideo`
+		FROM `proyectos_expertos_b16213_b77436`.`videoslinks` WHERE `videoslinks`.`id`=" . $posicionDestino . ";";
+		//guarda los datos consultados
+		$result = $conn->query($sql);
+		//se declara un arreglo para almacenar cada registro de la tabla destinos turisticos
+		$videoURL = "";
+		if ($result->num_rows > 0) {//condición if si la variable $result contiene almenos 1 registro
+			//recorre todo los registros extraídos de videos, hasta el último
+			while($row = $result->fetch_assoc()) {
+				//almacena cada registro en un arreglo bidimensional
+				$videoURL = $row["linkvideo"];
+			}
+		} else {//condición sino, donde variable $result no contiene registros
+			echo "0 results";
+		}
+		
+		
+		$conn->close();
+		return $videoURL;
+	}
+	
+	function obtenerInformacionDestinoEspecífico($idDestino){
+		$servername = "163.178.107.10";//La dirección del servidor MySQL
+		$username = "laboratorios";//usuario del servidor
+		$password = "UCRSA.118";//contraseña del servidor
+		$dbname = "proyectos_expertos_b16213_b77436";//nombre de la base de datos que se va a utilizar
+
+		//Realiza la conexión a una base de datos, utilizando la dirección, usuario, contraseña y base de datos del servidor a utilizar
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// En caso que la conexión fallé, envía mensaje de conexión fallida.
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} 
+		
+		$sql = "SELECT `destinosturisticosse`.`Id`,
+		`destinosturisticosse`.`Lugar`,
+		`destinosturisticosse`.`Comentarios`,
+		`destinosturisticosse`.`Likes`,
+		`destinosturisticosse`.`Actividad`,
+		`destinosturisticosse`.`Precio`,
+		`destinosturisticosse`.`Camino`,
+		`destinosturisticosse`.`Tiempo`,
+		`destinosturisticosse`.`Estilo`,
+		`destinosturisticosse`.`Latitud`,
+		`destinosturisticosse`.`Longitud`,
+		`destinosturisticosse`.`Nombre destino`
+		FROM `proyectos_expertos_b16213_b77436`.`destinosturisticosse` WHERE `destinosturisticosse`.`Id`=" . $idDestino .";";
+		//guarda los datos consultados
+		$result = $conn->query($sql);
+		//se declara un arreglo para almacenar cada registro de la tabla destinos turisticos
+		$datos = array();
+		if ($result->num_rows > 0) {//condición if si la variable $result contiene almenos 1 registro
+			//recorre todo los registros extraídos de destinosturisticosse, hasta el último
+			$fila =0;
+			$colm =0;
+			while($row = $result->fetch_assoc()) {
+				//almacena cada registro en un arreglo bidimensional
+				$datos[$fila][$colm] = $row["Tiempo"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Camino"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Precio"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Estilo"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Lugar"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Actividad"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Latitud"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Longitud"];
+				$colm = 0;
+				
+				$fila++;
+			}
+		} else {//condición sino, donde variable $result no contiene registros
+			echo "0 results";
+		}
+		
+		
+		$conn->close();
+		return $datos;
+	}
+	
+	function obtenerIdNuevo(){
+		$servername = "163.178.107.10";//La dirección del servidor MySQL
+		$username = "laboratorios";//usuario del servidor
+		$password = "UCRSA.118";//contraseña del servidor
+		$dbname = "proyectos_expertos_b16213_b77436";//nombre de la base de datos que se va a utilizar
+
+		//Realiza la conexión a una base de datos, utilizando la dirección, usuario, contraseña y base de datos del servidor a utilizar
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// En caso que la conexión fallé, envía mensaje de conexión fallida.
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} 
+		
+		$sql = "SELECT `destinosturisticosse`.`Id`,
+		`destinosturisticosse`.`Lugar`,
+		`destinosturisticosse`.`Comentarios`,
+		`destinosturisticosse`.`Likes`,
+		`destinosturisticosse`.`Actividad`,
+		`destinosturisticosse`.`Precio`,
+		`destinosturisticosse`.`Camino`,
+		`destinosturisticosse`.`Tiempo`,
+		`destinosturisticosse`.`Estilo`,
+		`destinosturisticosse`.`Latitud`,
+		`destinosturisticosse`.`Longitud`,
+		`destinosturisticosse`.`Nombre destino`
+		FROM `proyectos_expertos_b16213_b77436`.`destinosturisticosse`";
+		//guarda los datos consultados
+		$result = $conn->query($sql);
+		//se declara un arreglo para almacenar cada registro de la tabla destinos turisticos
+		$datoId = 0;
+		if ($result->num_rows > 0) {//condición if si la variable $result contiene almenos 1 registro
+			//recorre todo los registros extraídos de destinosturisticosse, hasta el último
+			$fila =0;
+			$colm =0;
+			while($row = $result->fetch_assoc()) {
+				//almacena cada registro en un arreglo bidimensional
+				$datoId = $row["Id"];
+				
+			}
+		} else {//condición sino, donde variable $result no contiene registros
+			echo "0 results";
+		}
+		
+		
+		$conn->close();
+		return $datoId;
+	}
+	
 	
 ?>
