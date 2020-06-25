@@ -1,4 +1,7 @@
 <?php
+
+include("euclidesAndNaiveBayes.php");
+
 $servername = "163.178.107.10"; //La dirección del servidor MySQL
 $username = "laboratorios"; //usuario del servidor
 $password = "UCRSA.118"; //contraseña del servidor
@@ -13,7 +16,7 @@ if ($conn->connect_error) {
 
 //declaracion variables
 
-
+$id=obtenerIdNuevo()+1;
 $name = $_POST['nombreDestinoIngresar'];
 $activity = $_POST['actividadDestinoIngresar'];
 $place = $_POST['lugarDestinoIngresar'];
@@ -24,10 +27,10 @@ $style = $_POST['estiloDestinoIngresar'];
 $image = 'aaaaaaa';
 
 $sql = "insert into proyectos_expertos_b16213_b77436.destinosturisticosse 
-	values(101,'$place',0,0,'$activity','$price','$roadType','$time','$style',0,0,'$name')";
+	values($id,'$place',0,0,'$activity','$price','$roadType','$time','$style',0,0,'$name')";
 $result=mysqli_query($conn,$sql);
 if ($name = 1) {
-	header("location:creardestino.php");
+	header("location:mantenimientodestino.php");
 }
 
-?>
+?> 

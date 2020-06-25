@@ -80,7 +80,7 @@
 			<label>Ingrese el nombre del destino turístico: </label>
 			<input type="text" placeholder="Ingrese nombre" name="nombreDestinoIngresar" required><br>
 
-			<label>Seleccione la actividad a realizar en este lugar:</label><br>
+			<label>Seleccione la actividad a realizar en este lugar:</label>
 			<select name="actividadDestinoIngresar" method="get">
 				<option value="Observación">Observación</option>
 				<option value="Caminata">Caminata</option>
