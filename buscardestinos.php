@@ -65,71 +65,88 @@
     </li>
   </ul>
 </nav>
-<div>
-	<table style="width:70%">
-	  <tr>
-		<td><b>Seleccione un lugar:<b></td>
-		<td><select name="lugar">
-				<option value="C">Cartago</option>
-				<option value="A">Alajuela</option>
-				<option value="S">San José</option>
-				<option value="H">Heredia</option>
-				<option value="L">Limón</option>
-				<option value="G">Guanacaste</option>
-				<option value="P">Puntarenas</option>
-			</select></td>
-	  </tr>
-	  <tr>
-		<td><b>Duracción de recorrido:<b></td>
-		<td><select name="tiempo">
-				<option value="1"> 30 min</option>
-				<option value="2">1 h</option>
-				<option value="3">1 h 30 min</option>
-				<option value="4">2 h</option>
-				<option value="5">2 h 30 min</option>
-				<option value="6">3 h</option>
-				<option value="7">3 h 30 min</option>
-				<option value="8"> > 4 h</option>
-			</select></td>
-	  </tr>
-	  <tr>
-		<td><b>Seleccione el tipo de camino:<b></td>
-		<td><select name="camino">
-				<option value="1">Asfalto</option>
-				<option value="2">Lastre</option>
-				<option value="3">Llano</option>
-				<option value="4">Curvas</option>
-				<option value="5">Empinado</option>
-			</select></td>
-	  </tr>
-	  
-	  <tr>
-		<td><b>Seleccione el precio:<b></td>
-		<td><select name="precio">
-				<option value="1">< 10000</option>
-				<option value="2">> 10000 y < 30000</option>
-				<option value="3">> 30000 y < 50000</option>
-				<option value="4">> 100000</option>
-			</select></td>
-	  </tr>
-	  
-	  <tr>
-		<td><b>Seleccione el estilo de destino:<b></td>
-		<td><select name="estilo">
-				<option value="1">Campo</option>
-				<option value="2">Ciudad</option>
-				<option value="3">Bosque</option>
-				<option value="4">Playa</option>
-			</select></td>
-	  </tr>
-	</table>
-	<br>
-	<br>
-	<button type="button" class="btn btn-primary" onclick="window.location.href='resultadosbusqueda.php'">
-		Buscar sitios turísticos cercanos
-	</button>
 
-</div>
+<form name="destinos" action="resultadosbusqueda.php" method="post">
+	<div>
+		<table style="width:70%">
+		  <tr>
+			<td><b>Seleccione un lugar:<b></td>
+			<td><select name="lugar">
+					<option value="1">Cartago</option>
+					<option value="2">Alajuela</option>
+					<option value="3">San José</option>
+					<option value="4">Heredia</option>
+					<option value="5">Guanacaste</option>
+					<option value="6">Limón</option>
+					<option value="7">Puntarenas</option>
+				</select></td>
+		  </tr>
+		  <tr>
+			<td><b>Duracción de recorrido:<b></td>
+			<td><select name="tiempo">
+					<option value="1">menor a 30 min</option>
+					<option value="2">30 min</option>
+					<option value="3">1 h 30 min</option>
+					<option value="4">2 h</option>
+					<option value="5">2h 30 min</option>
+					<option value="6">3 h</option>
+					<option value="7">3h 30 min</option>
+					<option value="8">4 h</option>
+					<option value="9">4 h 30 min</option>
+					<option value="10">5 h</option>
+					<option value="11">5 h 30 min</option>
+					<option value="12">mayor a 6 h</option>
+				</select></td>
+		  </tr>
+		  <tr>
+			<td><b>Seleccione el tipo de camino:<b></td>
+			<td><select name="camino">
+					<option value="1">Lastre</option>
+					<option value="2">Asfalto</option>
+					<option value="3">Empinado</option>
+					<option value="4">Llano</option>
+					<option value="5">Con curvas</option>
+					<option value="6">Sin curvas</option>
+				</select></td>
+		  </tr>
+		  
+		  <tr>
+			<td><b>Seleccione el precio:<b></td>
+			<td><select name="precio">
+					<option value="1">1000</option>
+					<option value="2">1500</option>
+					<option value="3">2500</option>
+					<option value="4">3000</option>
+					<option value="5">5000</option>
+					<option value="6">8000</option>
+					<option value="7">11000</option>
+					<option value="8">15000</option>
+					<option value="9">20000</option>
+					<option value="10">23000</option>
+					<option value="11">30000</option>
+					<option value="12">50000</option>
+					<option value="13">80000</option>
+					<option value="14">100000</option>
+					<option value="15">200000</option>
+				</select></td>
+		  </tr>
+		  
+		  <tr>
+			<td><b>Seleccione el estilo de destino:<b></td>
+			<td><select name="estilo">
+					<option value="1">Montaña</option>
+					<option value="2">Campo</option>
+					<option value="3">Ciudad</option>
+					<option value="4">Playa</option>
+				</select></td>
+		  </tr>
+		</table>
+		<br>
+		<br>
+		<input type="submit" class="btn btn-primary" value="Buscar sitios turísticos cercanos">
+		
 
+	</div>
+</form>
 </body>
 </html>

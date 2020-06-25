@@ -50,6 +50,12 @@
   </ul>
 </nav>
 
+<?php
+
+	$destino = $_POST['destino1'];
+	echo $destino . "<br>";
+?>
+
 <div >
 	<h3>Sanatorio Carlos Durán</h3>
 	
@@ -69,7 +75,7 @@
 	  </tr>
 	  <tr>
 		<td></td>
-		<td><img src="sanatorio.jpg" /></td>
+		<td><img src="sanatorio.jpg" /><iframe width="560" height="315" src="https://www.youtube.com/embed/CDV2AwOeeis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
 	  </tr>
 	</table>
 </div>
