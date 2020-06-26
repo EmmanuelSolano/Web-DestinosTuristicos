@@ -249,6 +249,8 @@
 				$datos[$fila][$colm] = $row["Latitud"];
 				$colm++;
 				$datos[$fila][$colm] = $row["Longitud"];
+				$colm++;
+				$datos[$fila][$colm] = $row["Nombre destino"];
 				$colm = 0;
 				
 				$fila++;

@@ -187,11 +187,13 @@ FROM `proyectos_expertos_b16213_b77436`.`destinosturisticosse`;";
 	$nombredestino1 = $arreglo[$posicion1][5];
 	$nombredestino2 = $arreglo[$posicion2][5];
 	$nombredestino3 = $arreglo[$posicion3][5];
-	$conn->close();
 	
 	$imagen1 = obtenerImagen(++$posicion1);
 	$imagen2 = obtenerImagen(++$posicion2);
 	$imagen3 = obtenerImagen(++$posicion3);
+	$conn->close();
+	
+	
 	
 ?>
 
@@ -207,20 +209,20 @@ FROM `proyectos_expertos_b16213_b77436`.`destinosturisticosse`;";
 		  <tr>
 			<td><p><?php echo $destino1 ?></p></td>
 			
-			<td><img src="<?php echo $imagen1?>" /></td>
-			<td><!--<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='detalles.php'">Ir</button>-->
-			<input type="submit" class="btn btn-primary btn-sm" name="destino1" value="<?php echo $nombredestino1; echo $posicion1 ?>"></td>
+			<td><img src="<?php echo $imagen1?>" alt="Imagen" /></td>
+			<td><a class="btn btn-primary btn-sm"  href="detalles.php/?valor1=<?php echo $posicion1 ?>">Ir</a></td>
 		  </tr>
 		  <tr>
 			<td><p><?php echo $destino2 ?></p></td>
-			<td><img src="<?php echo $imagen2?>" /></td>
-			<td><input type="submit" class="btn btn-primary btn-sm" name="destino1" value="<?php echo $nombredestino2 ?>"></td>
+			<td><img src="<?php echo $imagen2?>" alt="Imagen"/></td>
+			<td><a class="btn btn-primary btn-sm"  href="detalles.php/?valor1=<?php echo $posicion2 ?>">Ir</a></td>
 		  </tr>
 		  
 		  <tr>
 			<td><p><?php echo $destino3 ?></p></td>
-			<td><img src="<?php echo $imagen3?>" /></td>
-			<td><input type="submit" class="btn btn-primary btn-sm" name="destino1" value="<?php echo $nombredestino3 ?>"></td>
+			<td><img src="<?php echo $imagen3?>" alt="Imagen"/></td>
+			<td><a class="btn btn-primary btn-sm"  href="detalles.php/?valor1=<?php echo $posicion3 ?>">Ir</a>
+			</td>
 		  </tr>
 		  
 		  

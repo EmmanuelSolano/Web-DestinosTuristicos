@@ -29,7 +29,7 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="main.php">Principal</a>
+      <a class="nav-link" href="./main.php">Principal</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -51,34 +51,43 @@
 </nav>
 
 <?php
+	include 'euclidesAndNaiveBayes.php';
 
-	$destino = $_POST['destino1'];
-	echo $destino . "<br>";
+	
+	$valor = $_GET['valor1'];
+	$datos = array();
+	
+	$datos = obtenerInformacionDestinoEspecífico($valor);
+	$destino = $datos[0][8];
+	$info = "Información: " . $destino . ". Su actividad principal es: " . $datos[0][5] . ". Se encuentra a " . $datos[0][0] . ". Precio: " . $datos[0][2] . " colones. Tipo camino: " . $datos[0][1] . ". Estilo: " . $datos[0][3] . ".";  
+	$latitud = $datos[0][6];
+	$longitud = $datos[0][7];
+	
+	$imagen = obtenerImagen($valor);
+	$video = obtenerVideo($valor);
+	
 ?>
 
-<div >
-	<h3>Sanatorio Carlos Durán</h3>
-	
-	<table style="width:70%">
-	  <tr>
-		<td><p>Información
-			Sanatorio Carlos Durán, su actividad principal del reducto es realizar una caminata por sus alrededores e interior del edificio. Se encuentra a unos 30 minutos del norte de Cartago. Precio: 1000 colones
+<form name="destinos" action="llegardestino.php" method="post">
+	<div >
+		<h3><?php echo $destino ?></h3>
+		
+		<table style="width:70%">
+		  <tr>
+			<td><p><?php echo $info ?></p></td>
+			
+			<a class="btn btn-primary btn-sm"  href="llegardestino.php/?latitud=<?php echo $latitud ?>&longitud=<?php echo $longitud ?>">¿Cómo llegar al destino?</a>
+		 
+			<td></td>
+		  </tr>
+		  <tr>
+			<td><img src="<?php echo $imagen ?>" /></td>
+			<td><iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $video ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		  </tr>
+		</table>
+	</div>
 
-			Estilo: campo
-
-			Camino: asfalto</p></td>
-
-      <button type="button" class="btn btn-primary" onclick="window.location.href='llegardestino.php'">
-		    ¿Cómo llegar al destino?
-	    </button>
-		<td><img src="duran.jpg" /></td>
-	  </tr>
-	  <tr>
-		<td></td>
-		<td><img src="sanatorio.jpg" /><iframe width="560" height="315" src="https://www.youtube.com/embed/CDV2AwOeeis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-	  </tr>
-	</table>
-</div>
+</form>
 
 </body>
 </html>

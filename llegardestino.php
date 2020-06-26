@@ -8,6 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  
+	
  <style>
 	img{
 		width: 100%;
@@ -45,6 +48,12 @@
     </li>
   </ul>
 </nav>
+<?php
+
+	$latitud = $_GET['latitud'];
+	$longitud = $_GET['longitud'];
+
+	?>
 
 <div>
 	<br>
@@ -52,12 +61,9 @@
 	<br>
 	<h5 align="center">¿Cómo llegar al destino?</h5>
 	
-<div style="text-align: right">	
-	<button style="text-align: right" type="button" class="btn btn-primary btn-sm" >Ver detalles</button>
-</div>
 
-<div>
-	<img src="ubicacion.png" />
+	
+	<!--<iframe class="iframe" src="https://maps.google.com/?ll=<?php echo $latitud ?>,<?php echo $longitud ?>&z=14&t=m&output=embed" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>-->
 </div>
 
 </body>
