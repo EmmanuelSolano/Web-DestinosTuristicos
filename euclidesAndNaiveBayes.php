@@ -312,5 +312,59 @@
 		return $datoId;
 	}
 	
+	//calcula mediante el metodo de naive bayes los sitios más visitados del sitio web
+	function naiveBayes($arreglo){//la función recibe el arreglo, con las probabilidades que corresponden a los datos ingresados por el usuario.
+		$productoProbabilidades = 1.0;//almacena la probabilidad de cada uno de los resultados (provabildad segun estilo, sexo, recinto, porfesor, redes)
+		$resultados = array();//se declara arreglo para almaenar las probabilidades
+		//se aplica el algoritmo de naive bayes, recorriendo dato por dato y se multiplican las probabilidades
+		for($i=0;$i<sizeof($arreglo[0]);$i++){
+			for($f=0;$f<sizeof($arreglo)-1;$f++){
+				$probabilidad = str_replace(',', '.', $arreglo[$f][$i]);//se convierte la coma por el punto de las probabilidades, ya que al venir de la base se guardan con ,, y para multiplicar es necesario que sea punto los decimales
+				$productoProbabilidades = (double)$probabilidad*(double)$productoProbabilidades;// se multiplica las probabilidades de cada atributo del arreglo, según corresponda
+			}
+			$resultados[$i] = (double)$productoProbabilidades;// se guarda en el arreglo las probabilidades, además a probabilidad de cada resultado
+			$productoProbabilidades = 1.0;//se inicializa la variable para almacenar la nueva probabilidad de cada registro.
+		}
+		return $resultados;// al final retorna las probabilidades resultantes.
+	}
+	
+	
+	function obtieneIdDestino($nombreDestino){
+		$servername = "163.178.107.10";//La dirección del servidor MySQL
+		$username = "laboratorios";//usuario del servidor
+		$password = "UCRSA.118";//contraseña del servidor
+		$dbname = "proyectos_expertos_b16213_b77436";//nombre de la base de datos que se va a utilizar
+
+		//Realiza la conexión a una base de datos, utilizando la dirección, usuario, contraseña y base de datos del servidor a utilizar
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// En caso que la conexión fallé, envía mensaje de conexión fallida.
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} 
+		
+		$sql = "SELECT `destinosturisticosse`.`Id`
+		FROM `proyectos_expertos_b16213_b77436`.`destinosturisticosse` 
+		WHERE `destinosturisticosse`.`Nombre destino`='" . $nombreDestino ."' limit 1;";
+		//guarda los datos consultados
+		$result = $conn->query($sql);
+		//se declara un arreglo para almacenar cada registro de la tabla destinos turisticos
+		$idDestino = 0;
+		if ($result->num_rows > 0) {//condición if si la variable $result contiene almenos 1 registro
+			//recorre todo los registros extraídos de destinosturisticosse, hasta el último
+			$fila =0;
+			$colm =0;
+			while($row = $result->fetch_assoc()) {
+				//almacena cada registro en un arreglo bidimensional
+				$idDestino = $row["Id"];
+				
+			}
+		} else {//condición sino, donde variable $result no contiene registros
+			echo "0 results";
+		}
+		
+		
+		$conn->close();
+		return $idDestino;
+	}
 	
 ?>
