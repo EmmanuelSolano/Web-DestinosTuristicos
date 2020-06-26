@@ -125,7 +125,7 @@
 			$res = mysqli_query($conn, $sql2);
 			mysqli_query($conn, $sql3);
 
-			if(!$res){
+			if (!$res) {
 				die("Falló el query");
 			}
 
@@ -147,6 +147,7 @@
 
 							<label>Seleccione la actividad a realizar en este lugar:</label>
 							<select name="actividadDestinoModificar" value>
+								<option value="" selected disabled hidden>Elija una opción</option>
 								<option value="Observación">Observación</option>
 								<option value="Caminata">Caminata</option>
 								<option value="Senderismo">Senderismo</option>
@@ -156,6 +157,7 @@
 
 							<label>Seleccione un lugar: </label>
 							<select name="lugarDestinoModificar">
+								<option value="" selected disabled hidden>Elija una opción</option>
 								<option value="Cartago">Cartago</option>
 								<option value="Alajuela">Alajuela</option>
 								<option value="San José">San José</option>
@@ -167,6 +169,7 @@
 
 							<label>Duracción de recorrido: </label>
 							<select name="tiempoDestinoModificar">
+								<option value="" selected disabled hidden>Elija una opción</option>
 								<option value="30 min"> 30 min</option>
 								<option value="1 h">1 h</option>
 								<option value="1 h 30 min">1 h 30 min</option>
@@ -179,6 +182,7 @@
 
 							<label>Seleccione el tipo de camino: </label>
 							<select name="caminoDestinoModificar">
+								<option value="" selected disabled hidden>Elija una opción</option>
 								<option value="Asfalto">Asfalto</option>
 								<option value="Lastre">Lastre</option>
 								<option value="Llano">Llano</option>
@@ -191,13 +195,14 @@
 
 							<label>Seleccione el estilo de destino: </label>
 							<select name="estiloDestinoModificar">
+								<option value="" selected disabled hidden>Elija una opción</option>
 								<option value="Campo">Campo</option>
 								<option value="Ciudad">Ciudad</option>
 								<option value="Bosque">Bosque</option>
 								<option value="Playa">Playa</option>
 							</select><br><br>
 
-							<button class="btn btn-primary" name="modificarDestino">Modificar destino</button> 
+							<button class="btn btn-primary btn-block" name="modificarDestino">Modificar destino</button>
 						</div>
 					</form>
 				</div>

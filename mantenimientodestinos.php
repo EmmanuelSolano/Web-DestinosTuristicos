@@ -98,6 +98,7 @@
 
               <label>Seleccione la actividad a realizar en este lugar:</label>
               <select name="actividadDestinoIngresar" method="get">
+                <option value="" selected disabled hidden>Elija una opción</option>
                 <option value="Observación">Observación</option>
                 <option value="Caminata">Caminata</option>
                 <option value="Senderismo">Senderismo</option>
@@ -107,6 +108,7 @@
 
               <label>Seleccione un lugar: </label>
               <select name="lugarDestinoIngresar">
+                <option value="" selected disabled hidden>Elija una opción</option>
                 <option value="Cartago">Cartago</option>
                 <option value="Alajuela">Alajuela</option>
                 <option value="San José">San José</option>
@@ -118,6 +120,7 @@
 
               <label>Duracción de recorrido: </label>
               <select name="tiempoDestinoIngresar">
+                <option value="" selected disabled hidden>Elija una opción</option>
                 <option value="30 min"> 30 min</option>
                 <option value="1 h">1 h</option>
                 <option value="1 h 30 min">1 h 30 min</option>
@@ -130,6 +133,7 @@
 
               <label>Seleccione el tipo de camino: </label>
               <select name="caminoDestinoIngresar">
+                <option value="" selected disabled hidden>Elija una opción</option>
                 <option value="Asfalto">Asfalto</option>
                 <option value="Lastre">Lastre</option>
                 <option value="Llano">Llano</option>
@@ -142,6 +146,7 @@
 
               <label>Seleccione el estilo de destino: </label>
               <select name="estiloDestinoIngresar">
+                <option value="" selected disabled hidden>Elija una opción</option>
                 <option value="Campo">Campo</option>
                 <option value="Ciudad">Ciudad</option>
                 <option value="Bosque">Bosque</option>
