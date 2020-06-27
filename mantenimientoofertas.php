@@ -41,25 +41,15 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="homeadmin.php">
     </a>
 
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="main.php">Principal</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Destinos Turísticos
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="buscardestinos.php">Buscar destinos cercanos</a>
-          <a class="dropdown-item" href="sitiosmasvisitados.php">Sitios más visitados</a>
-          <a class="dropdown-item" href="ofertas.php">Ofertas</a>
-        </div>
+        <a class="nav-link" href="homeadmin.php">Principal</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -70,12 +60,7 @@
           <a class="dropdown-item" href="mantenimientoofertas.php">Administrar ofertas</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="mapadelsitio.php">Mapa del sitio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="creditos.php">Créditos</a>
-      </li>
+      
     </ul>
   </nav>
 
